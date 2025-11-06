@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gujarat Jyotirlinga Circuit - Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="trip-header">
+        <div class="container">
+            <a href="../index.html" class="back-btn">← Back to All Trips</a>
+            <h1>🛕 Gujarat Jyotirlinga Circuit</h1>
+            <div class="trip-meta">
+                <p><strong>Duration:</strong> 1st – 6th October 2025 (6 Days)</p>
+                <p><strong>Route:</strong> Secunderabad → Rajkot → Somnath → Dwarka → Okha → Nagpur → Secunderabad</p>
+                <p><strong>Highlights:</strong> Somnath Jyotirlinga, Dwarkadhish Temple, Nageshwar Jyotirlinga, Scenic Gujarat Coastline</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="trip-layout">
+            <section class="itinerary-section">
+                <h2>📅 Detailed Itinerary</h2>
+                <div class="days-container">
+                    <!-- Day 1 -->
+                    <div class="day-card">
+                        <div class="day-header" onclick="toggleDay('day1')">
+                            <h3>Day 1: 1st October 2025 (Wednesday)</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="day-content" id="day1">
+                            <h4>Secunderabad → Rajkot</h4>
+                            <ul>
+                                <li>Board train: As per confirmed booking from SC to Rajkot</li>
+                                <li>Train Tip: Keep snacks, water, power bank, and warm clothes for the overnight train</li>
+                                <li>Overnight Journey</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="day-card">
+                        <div class="day-header" onclick="toggleDay('day2')">
+                            <h3>Day 2: 2nd October 2025 (Thursday)</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="day-content" id="day2">
+                            <h4>Rajkot Arrival & Travel to Somnath</h4>
+                            <ul>
+                                <li>17:35: Arrive at Rajkot Junction</li>
+                                <li>18:20 – 22:50: Board Passenger Train to Somnath</li>
+                                <li>It's a slow train—carry snacks/dinner and water</li>
+                                <li>23:00: Check-in at Hotel in Somnath</li>
+                                <li>Suggest: Stay near temple for morning darshan convenience (Hotel Sun Plaza / Lords Inn Somnath are good options)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="day-card">
+                        <div class="day-header" onclick="toggleDay('day3')">
+                            <h3>Day 3: 3rd October 2025 (Friday)</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="day-content" id="day3">
+                            <h4>Somnath Sightseeing & Night Train to Dwarka</h4>
+                            <ul>
+                                <li>07:00 – 08:00: Somnath Jyotirlinga Darshan</li>
+                                <li>Best time for peaceful darshan, avoid long queues</li>
+                                <li>Visit nearby Somnath Beach post-darshan (optional)</li>
+                                <li>Full-Day Local Sightseeing (9:00 AM to ~5:00 PM)</li>
+                                <li>Join local tourist bus/auto for: Bhalka Tirth, Triveni Sangam, Gita Mandir, Prabhas Patan Museum, Surya Mandir, Bhidbhanjan Mahadev, Chorwad Beach</li>
+                                <li>23:05: Board SMNH OKHA Express (Train 19251) for Dwarka</li>
+                                <li>Overnight train journey</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Day 4 -->
+                    <div class="day-card">
+                        <div class="day-header" onclick="toggleDay('day4')">
+                            <h3>Day 4: 4th October 2025 (Saturday)</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="day-content" id="day4">
+                            <h4>Dwarka Darshan + Travel to Okha + Train to Nagpur</h4>
+                            <ul>
+                                <li>07:00: Arrive at Dwarka</li>
+                                <li>07:30 – 08:30: Dwarkadhish Temple Darshan</li>
+                                <li>Visit Gomti Ghat just beside temple after darshan</li>
+                                <li>Option: Have breakfast at local eateries (try Gujarati thali/dhokla)</li>
+                                <li>Local Sightseeing (10:00 AM to ~4:30 PM): Nageshwar Jyotirlinga, Rukmini Devi Temple, Bet Dwarka (Ferry), Bhadkeshwar Mahadev, Dwarka Lighthouse, Sudama Setu</li>
+                                <li>17:00: Leave for Okha Station (30-40 min by cab/auto)</li>
+                                <li>19:05: Board OKHA BSP SF Express (22939)</li>
+                                <li>Overnight journey to Nagpur</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Day 5 & 6 -->
+                    <div class="day-card">
+                        <div class="day-header" onclick="toggleDay('day5')">
+                            <h3>Day 5 & 6: Return Journey</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="day-content" id="day5">
+                            <h4>5th October: Travel to Nagpur & Secunderabad</h4>
+                            <ul>
+                                <li>20:05: Arrive at Nagpur Junction</li>
+                                <li>Dinner: Available at Nagpur station; try poha, thali meals</li>
+                                <li>23:10: Board train from Nagpur to SC</li>
+                                <li>Overnight Journey</li>
+                            </ul>
+                            <h4>6th October: Arrival at Secunderabad</h4>
+                            <ul>
+                                <li>07:00: Arrive at Secunderabad Junction</li>
+                                <li>Trip ends — memories begin! 🧘✨</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="map-section">
+                <h2>🗺️ Route Map</h2>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d12203419.431861982!2d70.48867369999999!3d20.593684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3a144e84d8c8a7a5%3A0x405f284f93c4f8f!2sSecunderabad%2C%20Telangana!3m2!1d17.4399295!2d78.4982741!4m5!1s0x395ce5c5d5c5c5c5%3A0x5c5c5c5c5c5c5c5!2sGujarat!3m2!1d22.258652!2d71.1923805!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="tips-section">
+                    <h3>💡 Travel Tips</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h4>What to Carry</h4>
+                            <ul>
+                                <li>Photocopies of ID proof</li>
+                                <li>Power bank, chargers</li>
+                                <li>Dry snacks, ORS, water bottle</li>
+                                <li>Cotton clothes + jacket</li>
+                                <li>Basic medicines</li>
+                            </ul>
+                        </div>
+                        <div class="tip-card">
+                            <h4>Temple Etiquette</h4>
+                            <ul>
+                                <li>Wear decent traditional clothes</li>
+                                <li>Remove footwear before entering</li>
+                                <li>Avoid carrying leather items</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="trip-footer">
+        <div class="container">
+            <p>&copy; 2025 Travel Planner. <a href="../index.html">View all trips</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
