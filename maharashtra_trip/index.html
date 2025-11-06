@@ -314,32 +314,6 @@
             border-radius: 0 8px 8px 0;
         }
 
-        /* Cost Summary */
-        .cost-summary {
-            margin-top: 30px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        th {
-            background-color: #f5f5f5;
-            color: var(--primary);
-        }
-
-        tr:hover {
-            background-color: #f9f9f9;
-        }
-
         /* Optional Section */
         .optional-section {
             background: #fff9e6;
@@ -451,6 +425,26 @@
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent);
+        }
+
+        .feature-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -459,7 +453,7 @@
             <a href="trips.html" class="back-btn">← Back to All Trips</a>
             <h1>🌏 Maharashtra Jyotirlinga + Heritage Ride</h1>
             <div class="trip-meta">
-                <p><strong>Dates:</strong> 28th November – 4th December 2025 | <strong>Travelers:</strong> </p>
+                <p><strong>Dates:</strong> 28th November – 4th December 2025</p>
                 <p><strong>Route:</strong> Hyderabad → Nashik → Shirdi → Aurangabad → Pune → Bhimashankar → Hyderabad</p>
             </div>
         </div>
@@ -492,11 +486,11 @@
 
         <!-- Map Section -->
         <section class="map-section">
-            <h2>🗺️ Satellite View Route Map</h2>
+            <h2>🗺️ Complete Route Directions</h2>
             
             <div class="map-info">
                 <div class="icon">🛰️</div>
-                <p><strong>Satellite View Active</strong> - See the terrain and landscape along your route</p>
+                <p><strong>Interactive Route Map</strong> - View complete directions with satellite terrain</p>
             </div>
 
             <div class="route-visual">
@@ -516,7 +510,7 @@
             </div>
 
             <div class="map-container">
-                <!-- Satellite View Route Map -->
+                <!-- Embedded Google Maps Directions -->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d12156761.814357592!2d73.72502454999999!3d18.5204303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x3a144e84d8c8a7a5%3A0x405f284f93c4f8f!2sSecunderabad%2C%20Telangana!3m2!1d17.4399295!2d78.4982741!4m5!1s0x3bcf9c3c1415f4c5%3A0x6c83d36d4a1a83a3!2sNashik%2C%20Maharashtra!3m2!1d19.9974533!2d73.78980229999999!4m5!1s0x3bdccafbb0c93d6d%3A0x6c8e1e9e4c7c4b4c!2sShirdi%2C%20Maharashtra!3m2!1d19.7652583!2d74.4779666!4m5!1s0x3bdcb05f56b7f4d7%3A0x7c4b8c8c8c8c8c8c!2sAurangabad%2C%20Maharashtra!3m2!1d19.8761653!2d75.3433139!4m5!1s0x3bc2bf4629ab2a3b%3A0x6c8e1e9e4c7c4b4c!2sPune%2C%20Maharashtra!3m2!1d18.5204303!2d73.8567437!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
                     width="100%" 
@@ -529,7 +523,7 @@
             </div>
             
             <div class="route-description">
-                <strong>Complete Route:</strong> Hyderabad → Nashik → Trimbakeshwar → Saptashrungi → Shirdi → Shingnapur → Aurangabad → Ghrishneshwar → Ellora → Ajanta → Aurangabad → Pune → Bhimashankar → Pune → Hyderabad
+                <strong>Complete Spiritual Circuit:</strong> Hyderabad → Nashik → Trimbakeshwar → Saptashrungi → Shirdi → Shingnapur → Aurangabad → Ghrishneshwar → Ellora → Ajanta → Aurangabad → Pune → Bhimashankar → Pune → Hyderabad
             </div>
             
             <div class="map-links">
@@ -537,14 +531,10 @@
                     <span class="icon">🗺️</span>
                     Open Full Route in Google Maps
                 </a>
-                <a href="https://maps.app.goo.gl/QoKwkwMgtDQ4VCyJ8" target="_blank" class="map-link">
-                    <span class="icon">🛰️</span>
-                    Alternative Satellite View
-                </a>
             </div>
             
             <div style="text-align: center; margin-top: 15px; color: #666; font-size: 0.9rem;">
-                <p>📍 <strong>Satellite Mode Active</strong> - View terrain, landscapes, and actual geography</p>
+                <p>📍 <strong>Directions Mode Active</strong> - View complete route with turn-by-turn navigation</p>
                 <p>🚗 Total distance: Approximately 1,200+ km • ⏱️ 7-day spiritual journey</p>
             </div>
         </section>
@@ -554,93 +544,55 @@
             <div>
                 <!-- Why This Route Section -->
                 <section>
-                    <h2>⭐ Why This Route Is the Best</h2>
+                    <h2>⭐ Why This Route Is Perfect</h2>
                     <div class="route-flow">
                         <ul>
                             <li><strong>Smooth north–south flow</strong> with no backtracking</li>
                             <li><strong>All major Jyotirlingas in Maharashtra covered:</strong> Trimbakeshwar → Grishneshwar → Bhimashankar</li>
                             <li><strong>All three UNESCO heritage sites:</strong> Ajanta, Ellora, and the Panchvati–Tapovan heritage belt</li>
                             <li><strong>Train transitions align perfectly</strong> with sightseeing hours</li>
+                            <li><strong>Optimal spiritual journey flow</strong> from ancient temples to modern pilgrimage sites</li>
                         </ul>
+                    </div>
+                </section>
+
+                <!-- Travel Features -->
+                <section>
+                    <h2>🚀 Travel Features</h2>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <h4>🏨 Accommodation</h4>
+                            <p>Carefully selected hotels near spiritual sites with verified reviews and family-friendly facilities</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>🛵 Transportation</h4>
+                            <p>Mix of trains, buses, and bike rentals for optimal travel experience and local exploration</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>🕉️ Spiritual Experience</h4>
+                            <p>Comprehensive temple visits with proper timing for rituals and darshan</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>🏛️ Heritage Exploration</h4>
+                            <p>Guided exploration of UNESCO World Heritage sites with historical context</p>
+                        </div>
                     </div>
                 </section>
 
                 <!-- Safety Notes -->
                 <section>
-                    <h2>🧭 Safety & Comfort Notes</h2>
+                    <h2>🧭 Safety & Comfort Guide</h2>
                     <div class="safety-notes">
                         <ul>
-                            
-                            <li>Carry power bank, torch, small day bag, and printed tickets</li>
-                            <li>Keep emergency contacts handy</li>
-                            <li>Stay hydrated and carry basic first aid</li>
-                            <li>Verify bike rental companies and check vehicle condition thoroughly</li>
+                            <li>Choose hotels with verified family-friendly reviews and safety measures</li>
+                            <li>Carry power bank, torch, small day bag, and printed tickets/documents</li>
+                            <li>Keep emergency contacts and local police numbers handy</li>
+                            <li>Stay hydrated and carry basic first aid kit</li>
+                            <li>Verify bike rental companies and thoroughly check vehicle condition</li>
+                            <li>Dress modestly for temple visits and carry appropriate coverings</li>
+                            <li>Keep digital copies of all important documents</li>
                         </ul>
                     </div>
-                </section>
-
-                <!-- Cost Summary -->
-                <section class="cost-summary">
-                    <h2>🧾 Booking Summary</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Category</th>
-                                <th>Details</th>
-                                <th>Approx ₹</th>
-                                <th>Platform</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Train 1</td>
-                                <td>Hyderabad → Nashik</td>
-                                <td></td>
-                                <td>IRCTC</td>
-                            </tr>
-                            <tr>
-                                <td>Train 2</td>
-                                <td>Aurangabad → Pune</td>
-                                <td></td>
-                                <td>IRCTC / MSRTC</td>
-                            </tr>
-                            <tr>
-                                <td>Train 3</td>
-                                <td>Pune → Hyderabad</td>
-                                <td></td>
-                                <td>IRCTC</td>
-                            </tr>
-                            <tr>
-                                <td>Hotels</td>
-                                <td>Nashik, Shirdi, Aurangabad</td>
-                                <td></td>
-                                <td>makemytrip</td>
-                            </tr>
-                            <tr>
-                                <td>Bike Rentals</td>
-                                <td>Nashik + Aurangabad</td>
-                                <td></td>
-                                <td>Rentrip / Bluebird</td>
-                            </tr>
-                            <tr>
-                                <td>Bus/Cabs</td>
-                                <td>Local transfers</td>
-                                <td></td>
-                                <td>MSRTC / cab</td>
-                            </tr>
-                            <tr>
-                                <td>Food & Entry</td>
-                                <td>—</td>
-                                <td></td>
-                                <td>Local</td>
-                            </tr>
-                            <tr style="font-weight: bold; background-color: #f0f0f0;">
-                                <td colspan="2">Total Estimated Cost</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </section>
             </div>
 
@@ -648,7 +600,7 @@
             <div>
                 <!-- Itinerary Section -->
                 <section class="itinerary-section">
-                    <h2>📅 Detailed Itinerary</h2>
+                    <h2>📅 Detailed Day-by-Day Itinerary</h2>
                     <div class="days-container">
                         <!-- Day 0 -->
                         <div class="day-card">
@@ -659,12 +611,12 @@
                             <div class="day-content" id="day0">
                                 <h4>Train Journey to Nashik</h4>
                                 <ul>
-                                    <li>Train: Devagiri Express (17058)</li>
-                                    <li>Departs 1:10 PM – Hyderabad Deccan (HYB)</li>
-                                    <li>Arrives 3:00 AM – Nashik Road (NK)</li>
-                                    <li>Ac/Sleeper Fare</li>
-                                    <li>Night: On train</li>
-                                    <li><strong>Tips:</strong> Carry snacks, warm clothing, earplugs, power bank.</li>
+                                    <li><strong>Train:</strong> Devagiri Express (17058)</li>
+                                    <li><strong>Departure:</strong> 1:10 PM – Hyderabad Deccan (HYB)</li>
+                                    <li><strong>Arrival:</strong> 3:00 AM – Nashik Road (NK)</li>
+                                    <li><strong>Class:</strong> AC/Sleeper</li>
+                                    <li><strong>Accommodation:</strong> Overnight on train</li>
+                                    <li><strong>Travel Tips:</strong> Carry snacks, warm clothing, earplugs, power bank</li>
                                 </ul>
                             </div>
                         </div>
@@ -672,28 +624,133 @@
                         <!-- Day 1 -->
                         <div class="day-card">
                             <div class="day-header" onclick="toggleDay('day1')">
-                                <h3>🛵 Day 1 – Sat 29 Nov: Nashik Sightseeing</h3>
+                                <h3>🛵 Day 1 – Sat 29 Nov: Nashik Spiritual Circuit</h3>
                                 <span class="expand-icon">+</span>
                             </div>
                             <div class="day-content" id="day1">
                                 <h4>Nashik Exploration by Bike</h4>
                                 <ul>
-                                    <li>Arrival: 3:00 AM → 15 min cab to hotel</li>
-                                    <li>Hotel: Sai Yatri / Panchavati Yatri Nivas </li>
-                                    <li>7 AM – Pick Up Bike </li>
-                                    <li><strong>Route Plan:</strong></li>
+                                    <li><strong>Arrival:</strong> 3:00 AM → 15 min cab to hotel</li>
+                                    <li><strong>Hotel:</strong> Sai Yatri / Panchavati Yatri Nivas</li>
+                                    <li><strong>Bike Rental:</strong> 7 AM pickup from Bike Rent Nashik</li>
+                                    <li><strong>Morning Route:</strong></li>
                                     <li>7 AM → 8 AM: Trimbakeshwar Jyotirlinga (30 km)</li>
-                                    <li>9 AM → 11 AM: Panchavati Circuit</li>
+                                    <li>9 AM → 11 AM: Panchavati Circuit (Ram Kund, Sita Gufa, Kalaram Temple)</li>
+                                    <li><strong>Afternoon:</strong></li>
                                     <li>12 PM → 2 PM: Lunch + Rest</li>
-                                    <li>2 PM → 4 PM: Saptashrungi Devi Temple (75 km)</li>
-                                    <li>6 PM → 8 PM: Return to Nashik (95 km)</li>
-                                    <li>Stay: Nashik </li>
-                                    <li><strong>Optional:</strong> Pandavleni Caves or Someshwar Temple</li>
+                                    <li>2 PM → 4 PM: Saptashrungi Devi Temple (75 km, ropeway experience)</li>
+                                    <li><strong>Evening:</strong></li>
+                                    <li>6 PM → 8 PM: Return to Nashik, drop bike</li>
+                                    <li><strong>Stay:</strong> Nashik hotel</li>
+                                    <li><strong>Optional:</strong> Pandavleni Caves sunset visit</li>
                                 </ul>
                             </div>
                         </div>
 
-                        <!-- Continue with other days... -->
+                        <!-- Day 2 -->
+                        <div class="day-card">
+                            <div class="day-header" onclick="toggleDay('day2')">
+                                <h3>🚌 Day 2 – Sun 30 Nov: Nashik → Shirdi Sai Baba Temple</h3>
+                                <span class="expand-icon">+</span>
+                            </div>
+                            <div class="day-content" id="day2">
+                                <h4>Shirdi Spiritual Experience</h4>
+                                <ul>
+                                    <li><strong>Transport:</strong> 8 AM MSRTC Bus to Shirdi (3 hours)</li>
+                                    <li><strong>Morning:</strong> Check into Sai Ashram / Bhakta Niwas</li>
+                                    <li><strong>Temple Visit (11 AM - 4 PM):</strong></li>
+                                    <li>Sai Baba Samadhi Mandir darshan</li>
+                                    <li>Dwarkamai and Gurusthan</li>
+                                    <li>Lendi Garden and Chavdi</li>
+                                    <li><strong>Evening:</strong> Relax at Sai Complex, local shopping</li>
+                                    <li><strong>Stay:</strong> Shirdi accommodation</li>
+                                    <li><strong>Optional:</strong> Evening aarti participation</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Day 3 -->
+                        <div class="day-card">
+                            <div class="day-header" onclick="toggleDay('day3')">
+                                <h3>🚌 Day 3 – Mon 1 Dec: Shirdi → Shani Shingnapur → Aurangabad</h3>
+                                <span class="expand-icon">+</span>
+                            </div>
+                            <div class="day-content" id="day3">
+                                <h4>Shani Temple & Aurangabad Arrival</h4>
+                                <ul>
+                                    <li><strong>Morning:</strong> 7 AM cab to Shani Shingnapur (1.5 hours)</li>
+                                    <li><strong>Temple Visit:</strong> 9–10 AM Darshan of Shani Dev</li>
+                                    <li><strong>Travel:</strong> 10:30 AM continue to Aurangabad (3–3.5 hours)</li>
+                                    <li><strong>Afternoon:</strong> Check into Hotel Regal Plaza / Vijay Residency</li>
+                                    <li><strong>Evening Exploration:</strong></li>
+                                    <li>Bibi Ka Maqbara (Mini Taj Mahal)</li>
+                                    <li>Aurangabad Caves visit</li>
+                                    <li><strong>Stay:</strong> Aurangabad hotel</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Day 4 -->
+                        <div class="day-card">
+                            <div class="day-header" onclick="toggleDay('day4')">
+                                <h3>🛵 Day 4 – Tue 2 Dec: Ellora + Grishneshwar + Ajanta Exploration</h3>
+                                <span class="expand-icon">+</span>
+                            </div>
+                            <div class="day-content" id="day4">
+                                <h4>UNESCO Heritage Day</h4>
+                                <ul>
+                                    <li><strong>Bike Rental:</strong> 7 AM pickup from Bluebird Rentals</li>
+                                    <li><strong>Morning (7 AM - 11 AM):</strong></li>
+                                    <li>Ellora Caves exploration (2 hours)</li>
+                                    <li>Grishneshwar Jyotirlinga darshan</li>
+                                    <li><strong>Travel:</strong> 11 AM scenic ride to Ajanta Caves (100 km)</li>
+                                    <li><strong>Afternoon (1:30 - 4:30 PM):</strong></li>
+                                    <li>Ajanta Caves detailed exploration</li>
+                                    <li>Caves 1-26 with guide (last entry 3:30 PM)</li>
+                                    <li><strong>Return:</strong> 4:30 PM ride back to Aurangabad</li>
+                                    <li><strong>Total Distance:</strong> ~260 km biking</li>
+                                    <li><strong>Stay:</strong> Aurangabad or overnight to Pune</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Day 5 -->
+                        <div class="day-card">
+                            <div class="day-header" onclick="toggleDay('day5')">
+                                <h3>🚌 Day 5 – Wed 3 Dec: Pune → Bhimashankar Jyotirlinga</h3>
+                                <span class="expand-icon">+</span>
+                            </div>
+                            <div class="day-content" id="day5">
+                                <h4>Bhimashankar Spiritual Journey</h4>
+                                <ul>
+                                    <li><strong>Morning:</strong> 7 AM bus/jeep to Bhimashankar (3 hours)</li>
+                                    <li><strong>Temple Visit:</strong> 10 AM - 12 PM Bhimashankar Jyotirlinga darshan</li>
+                                    <li><strong>Nature Walk:</strong> Forest walk around temple complex</li>
+                                    <li><strong>Return:</strong> 1 PM journey back to Pune</li>
+                                    <li><strong>Evening:</strong> Arrive Pune by 4 PM</li>
+                                    <li><strong>Departure:</strong> 6 PM Konark Express to Hyderabad</li>
+                                    <li><strong>Accommodation:</strong> Overnight train journey</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Day 6 -->
+                        <div class="day-card">
+                            <div class="day-header" onclick="toggleDay('day6')">
+                                <h3>🏡 Day 6 – Thu 4 Dec: Hyderabad Arrival</h3>
+                                <span class="expand-icon">+</span>
+                            </div>
+                            <div class="day-content" id="day6">
+                                <h4>Journey Completion</h4>
+                                <ul>
+                                    <li><strong>Arrival:</strong> 8 AM at Hyderabad Deccan Station</li>
+                                    <li><strong>Morning:</strong> Rest and refresh</li>
+                                    <li><strong>Optional:</strong> Local Hyderabad sightseeing</li>
+                                    <li><strong>Journey Ends:</strong> Spiritual and heritage experience complete</li>
+                                    <li><strong>Memories:</strong> 3 Jyotirlingas, UNESCO sites, and spiritual awakening</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -701,31 +758,31 @@
 
         <!-- Optional Add-ons Section -->
         <section class="optional-section">
-            <h2>🌈 Optional Add-ons</h2>
+            <h2>🌈 Optional Extensions & Add-ons</h2>
             <div class="optional-grid">
                 <div class="optional-card">
                     <h4>Pandavleni Caves</h4>
-                    <p><strong>From:</strong> Nashik</p>
-                    <p><strong>Time:</strong> 2 hrs</p>
-                    <p><strong>Highlights:</strong> Buddhist caves on hill</p>
+                    <p><strong>Location:</strong> Nashik</p>
+                    <p><strong>Time:</strong> 2 hours</p>
+                    <p><strong>Highlights:</strong> Ancient Buddhist caves with inscriptions</p>
                 </div>
                 <div class="optional-card">
                     <h4>Daulatabad Fort</h4>
-                    <p><strong>From:</strong> Aurangabad</p>
-                    <p><strong>Time:</strong> 1.5 hrs</p>
-                    <p><strong>Highlights:</strong> Historic fort between Ellora & city</p>
+                    <p><strong>Location:</strong> Aurangabad</p>
+                    <p><strong>Time:</strong> 1.5 hours</p>
+                    <p><strong>Highlights:</strong> Impregnable fort with complex defense systems</p>
                 </div>
                 <div class="optional-card">
                     <h4>Bhandardara</h4>
-                    <p><strong>From:</strong> Nashik</p>
+                    <p><strong>Location:</strong> Near Nashik</p>
                     <p><strong>Time:</strong> Half day</p>
-                    <p><strong>Highlights:</strong> Lake & waterfalls</p>
+                    <p><strong>Highlights:</strong> Serene lake, Wilson Dam, and waterfalls</p>
                 </div>
                 <div class="optional-card">
                     <h4>Sinhagad Fort</h4>
-                    <p><strong>From:</strong> Pune</p>
+                    <p><strong>Location:</strong> Pune</p>
                     <p><strong>Time:</strong> Half day</p>
-                    <p><strong>Highlights:</strong> Fort & sunset views</p>
+                    <p><strong>Highlights:</strong> Historic fort with panoramic views and sunset</p>
                 </div>
             </div>
         </section>
@@ -733,7 +790,7 @@
 
     <footer class="trip-footer">
         <div class="container">
-            <p>&copy; 2025 Travel Planner. <a href="trips.html">View all trips</a></p>
+            <p>&copy; 2025 Spiritual Travel Experiences. <a href="trips.html">Discover More Journeys</a></p>
         </div>
     </footer>
 
@@ -762,7 +819,7 @@
             toggleDay('day0');
         });
 
-        // Add satellite view notification
+        // Add map loaded notification
         document.addEventListener('DOMContentLoaded', function() {
             const mapInfo = document.querySelector('.map-info');
             if (mapInfo) {
@@ -771,7 +828,7 @@
                     mapInfo.style.borderLeft = '4px solid #34a853';
                     mapInfo.innerHTML = `
                         <div class="icon">✅</div>
-                        <p><strong>Satellite View Loaded</strong> - Now viewing terrain and landscape along your spiritual journey route</p>
+                        <p><strong>Route Map Loaded</strong> - Interactive directions with complete spiritual circuit</p>
                     `;
                 }, 2000);
             }
