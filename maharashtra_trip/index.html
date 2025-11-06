@@ -149,11 +149,15 @@
             overflow: hidden;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 15px;
+            position: relative;
+            height: 500px;
         }
 
         .map-container iframe {
             display: block;
             width: 100%;
+            height: 100%;
+            border: none;
         }
 
         .map-links {
@@ -161,21 +165,30 @@
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 20px;
         }
 
         .map-link {
             background: var(--primary);
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border-radius: 30px;
             text-decoration: none;
             transition: all 0.3s ease;
             font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .map-link:hover {
             background: var(--secondary);
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .map-link .icon {
+            font-size: 1.2rem;
         }
 
         /* Trip Layout */
@@ -391,6 +404,7 @@
             flex: 1;
             min-width: 120px;
             position: relative;
+            font-size: 0.9rem;
         }
 
         .route-point:not(:last-child)::after {
@@ -417,6 +431,13 @@
                 width: 100%;
             }
         }
+
+        .route-description {
+            text-align: center;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -425,7 +446,7 @@
             <a href="../index.html" class="back-btn">← Back to All Trips</a>
             <h1>🌏 Maharashtra Jyotirlinga + Heritage Ride</h1>
             <div class="trip-meta">
-                <p><strong>Dates:</strong> 28th November – 4th December 2025 | </p>
+                <p><strong>Dates:</strong> 28th November – 4th December 2025 | <strong>Travelers:</strong> 3 (2F + 1M)</p>
                 <p><strong>Route:</strong> Hyderabad → Nashik → Shirdi → Aurangabad → Pune → Bhimashankar → Hyderabad</p>
             </div>
         </div>
@@ -458,18 +479,23 @@
 
         <!-- Map Section -->
         <section class="map-section">
-            <h2>🗺️ Route Map</h2>
+            <h2>🗺️ Complete Route Map</h2>
             <div class="map-container">
-                <iframe 
-    src="https://www.google.com/maps/d/embed?mid=YOUR_MAP_ID&ehbc=FFFFFF"
-    width="100%" 
-    height="500"
-    style="border:0;">
-</iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m58!1m12!1m3!1d12156761.814357592!2d73.72502454999999!3d18.5204303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m43!3e0!4m5!1s0x3bc2bf4629ab2a3b%3A0x6c8e1e9e4c7c4b4c!2sPune%2C%20Maharashtra!3m2!1d18.5204303!2d73.8567437!4m5!1s0x3bdd442595555555%3A0x3923896a457fe3c8!2sBhimashankar%20Temple%2C%20Bhimashankar%2C%20Maharashtra%20412508!3m2!1d19.0719986!2d73.536129!4m5!1s0x3bc2bf4629ab2a3b%3A0x6c8e1e9e4c7c4b4c!2sPune%2C%20Maharashtra!3m2!1d18.5204303!2d73.8567437!4m5!1s0x3bdcb05f56b7f4d7%3A0x7c4b8c8c8c8c8c8c!2sAurangabad%2C%20Maharashtra!3m2!1d19.8761653!2d75.3433139!4m5!1s0x3bd97f7014a75e43%3A0x7ca8d7c57639691f!2sAjanta%20Caves%2C%20Maharashtra!3m2!1d20.5513286!2d75.7069356!4m5!1s0x3bdb93bd138ae4bd%3A0x574c6482cf0b89cf!2sEllora%20Caves%2C%20Verul%2C%20Maharashtra!3m2!1d20.0267844!2d75.1770869!4m5!1s0x3be7cf00159a2661%3A0x918a34510b2408f0!2sShri%20Ghrishneshwar%20Jyotirlinga%2C%20Ellora%2C%20Maharashtra%20431006!3m2!1d20.024904!2d75.1698997!4m5!1s0x3bdcb05f56b7f4d7%3A0x7c4b8c8c8c8c8c8c!2sAurangabad%2C%20Maharashtra!3m2!1d19.8761653!2d75.3433139!4m5!1s0x3bdc9947273cd64f%3A0x8fa72555d843e2f3!2sShani%20Shingnapur%2C%20Maharashtra!3m2!1d19.3809105!2d74.8581505!4m5!1s0x3bdc5b95bf70c2f7%3A0x23dbc9b2db45374!2sShri%20Sai%20Baba%20Samadhi%20Mandir%2C%20Shirdi%2C%20Maharashtra%20423201!3m2!1d19.7661782!2d74.4769973!4m5!1s0x3bddebab4031a96b%3A0x9d58a577e5a8566b!2sSaptashrungi%20Devi%20Mandir%2C%20Saptashrungi%20Gad%2C%20Maharashtra%20422113!3m2!1d20.0063301!2d73.7993276!4m5!1s0x3bddeb013af2e74b%3A0x716282a3a46b04cc!2sTrimbakeshwar%20Jyotirling%20Mandir%2C%20Trimbak%2C%20Maharashtra%20422213!3m2!1d19.9321592!2d73.5307823!4m5!1s0x3bcf9c3c1415f4c5%3A0x6c83d36d4a1a83a3!2sNashik%2C%20Maharashtra!3m2!1d19.9974533!2d73.78980229999999!4m5!1s0x3bc2bf4629ab2a3b%3A0x6c8e1e9e4c7c4b4c!2sPune%2C%20Maharashtra!3m2!1d18.5204303!2d73.8567437!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                    width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
             </div>
+            
+            <div class="route-description">
+                <strong>Complete Route:</strong> Hyderabad → Nashik → Trimbakeshwar → Saptashrungi → Shirdi → Shingnapur → Aurangabad → Ghrishneshwar → Ellora → Ajanta → Aurangabad → Pune → Bhimashankar → Pune → Hyderabad
+            </div>
+            
             <div class="map-links">
-                <a href="https://maps.app.goo.gl/PY1Low5mhQMvpJ7M9" target="_blank" class="map-link">View Full Route</a>
-                <a href="https://www.google.com/maps/dir/Trimbakeshwar+Jyotirling+Mandir/Saptashrungi+Devi+Mandir/Shri+Sai+Baba+Samadhi+Mandir/Shani+Shingnapur,+Maharashtra/Aurangabad,+Maharashtra/Shri+Ghrishneshwar+Jyotirlinga/Ellora+Caves,+Verul,+Maharashtra/Ajanta+Caves,+Maharashtra/PUNE+RAILWAY+STATION,+Pune,+Maharashtra/Bhimashankar+Temple/@19.5222878,74.2267768,374204m/data=!3m1!1e3!4m62!4m61!1m5!1m1!1s0x3bddeb013af2e74b:0x716282a3a46b04cc!2m2!1d73.5307823!2d19.9321592!1m5!1m1!1s0x3bddebab4031a96b:0x9d58a577e5a8566b!2m2!1d73.7993276!2d20.0063301!1m5!1m1!1s0x3bdc5b95bf70c2f7:0x23dbc9b2db45374!2m2!1d74.4769973!2d19.7661782!1m5!1m1!1s0x3bdc9947273cd64f:0x8fa72555d843e2f3!2m2!1d74.8581505!2d19.3809105!1m5!1m1!1s0x3bdb9815a369bc63:0x712d538b29a2a73e!2m2!1d75.3393195!2d19.875754!1m5!1m1!1s0x3be7cf00159a2661:0x918a34510b2408f0!2m2!1d75.1698997!2d20.024904!1m5!1m1!1s0x3bdb93bd138ae4bd:0x574c6482cf0b89cf!2m2!1d75.1770869!2d20.0267844!1m5!1m1!1s0x3bd97f7014a75e43:0x7ca8d7c57639691f!2m2!1d75.7069356!2d20.5513286!1m5!1m1!1s0x3bc2c05fc75d5bab:0x32832b2b7fca159d!2m2!1d73.8665321!2d18.5288974!1m5!1m1!1s0x3bdd442595555555:0x3923896a457fe3c8!2m2!1d73.536129!2d19.0719986!3e9?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-link">Detailed Directions</a>
+                <a href="https://maps.app.goo.gl/QoKwkwMgtDQ4VCyJ8" target="_blank" class="map-link">
+                    <span class="icon">🗺️</span>
+                    View Full Route on Google Maps
+                </a>
             </div>
         </section>
 
@@ -490,6 +516,7 @@
                     
                     <h3 style="margin-top: 20px;">Complete Route Flow:</h3>
                     <div class="route-visual">
+                        <div class="route-point">Hyderabad</div>
                         <div class="route-point">Nashik</div>
                         <div class="route-point">Trimbakeshwar</div>
                         <div class="route-point">Saptashrungi</div>
@@ -501,6 +528,7 @@
                         <div class="route-point">Ajanta</div>
                         <div class="route-point">Pune</div>
                         <div class="route-point">Bhimashankar</div>
+                        <div class="route-point">Hyderabad</div>
                     </div>
                 </section>
 
@@ -534,48 +562,48 @@
                             <tr>
                                 <td>Train 1</td>
                                 <td>Hyderabad → Nashik</td>
-                            
+                                <td>500</td>
                                 <td>IRCTC</td>
                             </tr>
                             <tr>
                                 <td>Train 2</td>
                                 <td>Aurangabad → Pune</td>
-                            
+                                <td>800</td>
                                 <td>IRCTC / MSRTC</td>
                             </tr>
                             <tr>
                                 <td>Train 3</td>
                                 <td>Pune → Hyderabad</td>
-                            
+                                <td>500</td>
                                 <td>IRCTC</td>
                             </tr>
                             <tr>
                                 <td>Hotels</td>
                                 <td>Nashik, Shirdi, Aurangabad</td>
-                                
+                                <td>2400</td>
                                 <td>Booking.com</td>
                             </tr>
                             <tr>
                                 <td>Bike Rentals</td>
                                 <td>Nashik + Aurangabad</td>
-                                
+                                <td>1800</td>
                                 <td>Rentrip / Bluebird</td>
                             </tr>
                             <tr>
                                 <td>Bus/Cabs</td>
                                 <td>Local transfers</td>
-                            
+                                <td>800</td>
                                 <td>MSRTC / cab</td>
                             </tr>
                             <tr>
                                 <td>Food & Entry</td>
                                 <td>—</td>
-                                
+                                <td>1500</td>
                                 <td>Local</td>
                             </tr>
                             <tr style="font-weight: bold; background-color: #f0f0f0;">
                                 <td colspan="2">Total Estimated Cost</td>
-                                
+                                <td>8300</td>
                                 <td>Per Person</td>
                             </tr>
                         </tbody>
